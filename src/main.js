@@ -1,5 +1,9 @@
 import Vue from 'vue';
-import App from './App.vue';
+import { hooks } from 'vue-hooks';
+
+import App from './app.vue';
+
+Vue.use(hooks);
 
 Vue.config.productionTip = false;
 

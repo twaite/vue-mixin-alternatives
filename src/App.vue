@@ -1,17 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <counter/>
+    <hr/>
+    <counter-with-mixin/>
+    <hr/>
+    <counter-from-service-explicit/>
+    <hr/>
+    <counter-from-service-spread/>
+    <hr/>
+    <counter-with-hooks/>
+    <hr/>
+    <FunctionalCounterWithHooks/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Counter from './components/counter';
+import CounterWithMixin from './components/counter-with-mixin';
+import CounterFromServiceExplicit from './components/counter-from-service-explicit';
+import CounterFromServiceSpread from './components/counter-from-service-spread';
+import CounterWithHooks from './components/counter-with-hooks';
+import FunctionalCounterWithHooks from './components/functional-counter-with-hooks.jsx';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    Counter,
+    CounterWithMixin,
+    CounterFromServiceExplicit,
+    CounterFromServiceSpread,
+    CounterWithHooks,
+    FunctionalCounterWithHooks,
   },
 };
 </script>
@@ -24,5 +43,23 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  --blue: #35495e;
 }
+
+hr {
+  border-color: var(--blue);
+}
+
+button {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 1em;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
 </style>
