@@ -41,10 +41,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 
   --blue: #35495e;
+  --green: #41b883;
+  color: var(--blue);
 }
 
 hr {
@@ -52,8 +52,8 @@ hr {
 }
 
 button {
-    color: var(--blue);
-    border: 1px solid var(--blue);
+    color: var(--green);
+    border: 2px solid var(--green);
     border-radius: 3px;
     font-size: 1em;
     padding: 0.5em;
